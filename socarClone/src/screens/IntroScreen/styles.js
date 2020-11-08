@@ -28,8 +28,12 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: '#ffffff',
         fontSize: 20,
-    }
+    },
 
+    image: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height - 50
+    }
 
 
 })
