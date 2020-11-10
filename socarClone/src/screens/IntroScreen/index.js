@@ -1,8 +1,10 @@
+import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { View, Text,  Dimensions } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import SplashScreen from 'react-native-splash-screen';
+
 import ImageSlider from '../../components/ImageSlider';
+import LoginScreen from '../LoginScreen';
 
 import styles from './styles';
 
@@ -17,10 +19,17 @@ const images = [
 
 const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
+const AuthStack = createStackNavigator();
+
+const IntroStackScreen = () => {
+    <AuthStack.Navigator>
+        <AuthStack.Screen
+            name={LoginScreen}
+            options={{title:'로그인'}} />
+    </AuthStack.Navigator>
+}
 const IntroScreen = () => {
-
-    SplashScreen.hide()
-
+  
     return (
         <>
             <ImageSlider images={images} height={windowHeight-70} width={windowWidth} />
