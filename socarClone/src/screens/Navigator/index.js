@@ -4,14 +4,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from 'react-native-splash-screen';
 import IntroScreen from '../IntroScreen';
 
-const Stack = createStackNavigator();
-
 import { AuthContext } from '../../context/AuthContext';
 import { Loading } from '../../components/Loading';
 
 const RootStack = createStackNavigator();
 
+// 로그인 유무에 따라서 메인으로 갈지 인트로로 갈지를 결정
 const RootStackScreen = ({ userToken }) => (
+
     <RootStack.Navigator headerMode="none">
       {userToken ? (
         <RootStack.Screen
@@ -20,7 +20,7 @@ const RootStackScreen = ({ userToken }) => (
           options={{title:''}} />
       ) : (
         <RootStack.Screen
-          name="Intro"
+          name="Auth"
           component={IntroScreen}
           options={{title:''}} />
       )}

@@ -30,6 +30,7 @@
     "react-native-slideshow": "1.0.1",
     "react-native-splash-screen": "3.2.0",
     "react-native-swiper-flatlist": "2.0.4",
+    "react-native-vector-icons": "7.1.0",
     "react-native-x2-carousel": "1.0.1"
   },
   "devDependencies": {

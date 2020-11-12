@@ -4,6 +4,7 @@ import { View, Text,  Dimensions } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import ImageSlider from '../../components/ImageSlider';
+import JoinScreen from '../JoinScreen';
 import LoginScreen from '../LoginScreen';
 
 import styles from './styles';
@@ -21,14 +22,25 @@ const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 const AuthStack = createStackNavigator();
 
-const IntroStackScreen = () => {
-    <AuthStack.Navigator>
+const IntroScreen = () => (
+
+    <AuthStack.Navigator
+        initialRouteName="Intro"
+        headerMode="none">
         <AuthStack.Screen
-            name={LoginScreen}
-            options={{title:'로그인'}} />
+            name="Intro"
+            component={Intro}
+            options={{title:'로그인'}}  />
+        <AuthStack.Screen
+            name="Login"
+            component={LoginScreen} />
+        <AuthStack.Screen
+            name="Join"
+            component={JoinScreen} />
     </AuthStack.Navigator>
-}
-const IntroScreen = () => {
+)
+
+const Intro = ({navigation}) => {
   
     return (
         <>
@@ -38,13 +50,21 @@ const IntroScreen = () => {
                     <TouchableOpacity
                         activeOpacity={0.9}
                         style={[styles.bottomBtn, styles.colorLogin]}>
-                        <Text style={styles.txtBtn}>로그인</Text>
+                        <Text 
+                            style={styles.txtBtn}
+                            onPress={()=> navigation.push("Login")}>
+                                로그인
+                        </Text>
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity
                     activeOpacity={0.9}
                     style={[styles.bottomBtn, styles.colorJoin]}>
-                    <Text style={styles.txtBtn}>회원가입</Text>
+                    <Text 
+                        style={styles.txtBtn}
+                        onPress={()=> navigation.push("Join")}>
+                        회원가입
+                    </Text>
                 </TouchableOpacity>
             </View >
         </>
