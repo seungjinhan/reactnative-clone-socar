@@ -9,9 +9,14 @@ const LoginScreen = ( { navigation}) => (
         style={styles.container}>
         <View
             style={styles.topContainer}>
-            <Text
+            <TouchableOpacity
+                onPress={()=>navigation.goBack()}
+            >
+            <Image
+                source={require('../../assets/images/icons/arrow_left.png')} 
                 style={styles.arrow}
-                onPress={()=>navigation.goBack()}>←</Text>
+                />
+            </TouchableOpacity>
             <Text></Text>
         </View>
         <View style={styles.mainContainer}>

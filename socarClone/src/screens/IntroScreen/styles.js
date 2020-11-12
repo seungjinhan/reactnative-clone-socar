@@ -25,9 +25,8 @@ const styles = StyleSheet.create({
     },
 
     txtBtn: {
-        fontWeight: "bold",
         color: '#ffffff',
-        fontSize: 20,
+        fontSize: 15,
     },
 
     image: {

@@ -63,7 +63,7 @@ const Intro = ({navigation}) => {
                     <Text 
                         style={styles.txtBtn}
                         onPress={()=> navigation.push("Join")}>
-                        회원가입
+                        가입하기
                     </Text>
                 </TouchableOpacity>
             </View >

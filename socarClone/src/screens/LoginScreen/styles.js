@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 
 const styles = StyleSheet.create({
@@ -8,8 +8,10 @@ const styles = StyleSheet.create({
     },
     
     arrow:{
-        fontSize:40,
-        color:'#000000'
+        marginTop:5,
+        marginLeft:10,
+        width:25,
+        height:25
     },
 
     topContainer:{
