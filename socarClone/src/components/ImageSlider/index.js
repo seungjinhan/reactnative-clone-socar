@@ -7,6 +7,7 @@ const ImageSlider = ({ images, width, height }) => {
     const [state, setState] = useState(0);
 
     const change = ({ nativeEvent }) => {
+        
         const slide = Math.ceil(nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width);
         if (slide !== state) {
             setState(slide);

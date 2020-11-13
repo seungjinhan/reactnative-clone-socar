@@ -1,6 +1,7 @@
 import React from 'react';
 import  { View, Text, Button } from "react-native";
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import MainScreen from '../MainScreen';
 import styles from './styles';
 
 const JoinScreen = () => (
@@ -25,8 +26,14 @@ const JoinScreen = () => (
                 </TouchableOpacity>
             </View>
             <View style={styles.bodyView4}>
-                <TouchableOpacity style={styles.bodyView4Button} >
-                    <Text style={styles.bodyView4ButtonText}>가입하기</Text>
+                <TouchableOpacity 
+                    style={styles.bodyView4Button} 
+                    onPress={MainScreen}> 
+                    <Text 
+                        style={styles.bodyView4ButtonText}
+                        >
+                        가입하기
+                    </Text>
                 </TouchableOpacity>
             </View>
         </View>

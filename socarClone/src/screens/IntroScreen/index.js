@@ -57,15 +57,17 @@ const Intro = ({navigation}) => {
                         </Text>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity
-                    activeOpacity={0.9}
-                    style={[styles.bottomBtn, styles.colorJoin]}>
-                    <Text 
-                        style={styles.txtBtn}
-                        onPress={()=> navigation.push("Join")}>
-                        가입하기
-                    </Text>
-                </TouchableOpacity>
+                <View>
+                    <TouchableOpacity
+                        activeOpacity={0.9}
+                        style={[styles.bottomBtn, styles.colorJoin]}>
+                        <Text 
+                            style={styles.txtBtn}
+                            onPress={()=> navigation.push("Join")}>
+                            가입하기
+                        </Text>
+                    </TouchableOpacity>
+                </View>
             </View >
         </>
     )
