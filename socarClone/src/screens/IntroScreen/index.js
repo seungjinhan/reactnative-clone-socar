@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { View, Text,  Dimensions } from 'react-native';
+import { View, Text, Dimensions } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import ImageSlider from '../../components/ImageSlider';
@@ -30,7 +30,7 @@ const IntroScreen = () => (
         <AuthStack.Screen
             name="Intro"
             component={Intro}
-            options={{title:'로그인'}}  />
+            options={{ title: '로그인' }} />
         <AuthStack.Screen
             name="Login"
             component={LoginScreen} />
@@ -40,20 +40,23 @@ const IntroScreen = () => (
     </AuthStack.Navigator>
 )
 
-const Intro = ({navigation}) => {
-  
+const Intro = ({ navigation }) => {
+
     return (
         <>
-            <ImageSlider images={images} height={windowHeight-70} width={windowWidth} />
+            <ImageSlider
+                images={images}
+                height={windowHeight - 70}
+                width={windowWidth} />
             <View style={styles.container}>
                 <View style={{ alignItems: "center" }}>
                     <TouchableOpacity
                         activeOpacity={0.9}
                         style={[styles.bottomBtn, styles.colorLogin]}>
-                        <Text 
+                        <Text
                             style={styles.txtBtn}
-                            onPress={()=> navigation.push("Login")}>
-                                로그인
+                            onPress={() => navigation.push("Login")}>
+                            로그인
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -61,9 +64,9 @@ const Intro = ({navigation}) => {
                     <TouchableOpacity
                         activeOpacity={0.9}
                         style={[styles.bottomBtn, styles.colorJoin]}>
-                        <Text 
+                        <Text
                             style={styles.txtBtn}
-                            onPress={()=> navigation.push("Join")}>
+                            onPress={() => navigation.push("Join")}>
                             가입하기
                         </Text>
                     </TouchableOpacity>
